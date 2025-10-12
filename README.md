@@ -53,29 +53,7 @@ Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing 
 3. Login:
    - Consulte `LOGIN E SENHA.txt` na raiz do projeto para credenciais de teste, se necessário.
 
-## Como Fazer Commit no Repositório GitHub (TrabalhoAOO)
-Se o repositório remoto é `https://github.com/BianoSorriso/TrabalhoAOO`, execute no diretório do projeto:
-- `git init`
-- `git add .`
-- `git commit -m "Add README e SCM Flusão (AOO)"`
-- `git branch -M main`
-- `git remote add origin https://github.com/BianoSorriso/TrabalhoAOO.git`
-- `git push -u origin main`
-
-Observação: o `git push` requer que você esteja autenticado com acesso de escrita ao repositório.
-
-## Screenshots
-- Dashboard com totais
-  
-  ![Dashboard](DASH.jpg)
-
-- Tela de Transportes
-  
-  ![Transportes](TRAS.jpg)
-
-- Console / Shell principal
-  
-  ![AppShell](SCM Flusão - CORRIGIDO.png)
+ 
 
 ## Licença
 Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para detalhes.
