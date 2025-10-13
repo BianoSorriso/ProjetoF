@@ -55,7 +55,7 @@ public class LoginView extends JFrame {
         header.add(stripe, BorderLayout.SOUTH);
         container.add(header, BorderLayout.NORTH);
 
-        JPanel form = new JPanel(new GridLayout(4, 1, 8, 8));
+        JPanel form = new JPanel(new GridLayout(3, 1, 8, 8));
 
         JPanel emailPanel = new JPanel(new BorderLayout());
         emailPanel.add(new JLabel("Email:"), BorderLayout.NORTH);
@@ -68,6 +68,14 @@ public class LoginView extends JFrame {
         txtSenha = new JPasswordField();
         senhaPanel.add(txtSenha, BorderLayout.CENTER);
         form.add(senhaPanel);
+
+        // Rodapé com nomes do grupo, ocupando o espaço em branco abaixo dos campos
+        JPanel grupoPanel = new JPanel(new BorderLayout());
+        JLabel grupoLabel = new JLabel("Grupo: Gustavo \uD83D\uDC51, Giulia Baum, Fabiano Bastos", JLabel.CENTER);
+        grupoLabel.setFont(new Font("SansSerif", Font.PLAIN, 12));
+        grupoLabel.setForeground(Color.DARK_GRAY);
+        grupoPanel.add(grupoLabel, BorderLayout.CENTER);
+        form.add(grupoPanel);
 
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         btnEntrar = new JButton("Entrar");
