@@ -1,1 +1,12 @@
 LOGIN E SENHA.txt
+
+# Ignore build outputs
+NOVOFLU/bin/
+NOVOFLU/out/
+
+# Ignore local database files
+NOVOFLU/data/
+data/
+
+# General
+*.class

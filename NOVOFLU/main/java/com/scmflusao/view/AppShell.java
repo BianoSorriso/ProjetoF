@@ -95,7 +95,6 @@ public class AppShell extends JFrame {
 
     private void montarMenu() {
         sidebar.removeAll();
-        JButton btnDashboard = new JButton("Dashboard");
         JButton btnAgentes = new JButton("Agentes");
         JButton btnEmpresas = new JButton("Empresas Parceiras");
         JButton btnProdutos = new JButton("Produtos");
@@ -103,12 +102,11 @@ public class AppShell extends JFrame {
         JButton btnTransportes = new JButton("Transportes");
         JButton btnRelatorios = new JButton("Relatórios");
 
-        for (JButton b : new JButton[]{btnDashboard, btnAgentes, btnEmpresas, btnProdutos, btnItens, btnTransportes, btnRelatorios}) {
+        for (JButton b : new JButton[]{btnAgentes, btnEmpresas, btnProdutos, btnItens, btnTransportes, btnRelatorios}) {
             b.setBackground(BRANCO);
             b.setForeground(Color.DARK_GRAY);
         }
 
-        btnDashboard.addActionListener(e -> abrirDashboard());
         btnAgentes.addActionListener(e -> abrirAgentes());
         btnEmpresas.addActionListener(e -> abrirEmpresas());
         btnProdutos.addActionListener(e -> abrirProdutos());
@@ -122,7 +120,6 @@ public class AppShell extends JFrame {
         boolean isOperador = p == Perfil.OPERADOR;
         boolean isParceiro = p == Perfil.PARCEIRO;
 
-        sidebar.add(btnDashboard);
         sidebar.add(btnAgentes);
         sidebar.add(btnEmpresas);
         sidebar.add(btnProdutos);
