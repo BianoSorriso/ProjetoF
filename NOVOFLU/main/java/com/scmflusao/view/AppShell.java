@@ -99,10 +99,11 @@ public class AppShell extends JFrame {
         JButton btnEmpresas = new JButton("Empresas Parceiras");
         JButton btnProdutos = new JButton("Produtos");
         JButton btnItens = new JButton("Itens");
+        JButton btnCidades = new JButton("Cidades");
         JButton btnTransportes = new JButton("Transportes");
         JButton btnRelatorios = new JButton("Relatórios");
 
-        for (JButton b : new JButton[]{btnAgentes, btnEmpresas, btnProdutos, btnItens, btnTransportes, btnRelatorios}) {
+        for (JButton b : new JButton[]{btnAgentes, btnEmpresas, btnProdutos, btnItens, btnCidades, btnTransportes, btnRelatorios}) {
             b.setBackground(BRANCO);
             b.setForeground(Color.DARK_GRAY);
         }
@@ -111,6 +112,7 @@ public class AppShell extends JFrame {
         btnEmpresas.addActionListener(e -> abrirEmpresas());
         btnProdutos.addActionListener(e -> abrirProdutos());
         btnItens.addActionListener(e -> abrirItens());
+        btnCidades.addActionListener(e -> abrirCidades());
         btnTransportes.addActionListener(e -> abrirTransportes());
         btnRelatorios.addActionListener(e -> abrirRelatorios());
 
@@ -124,6 +126,7 @@ public class AppShell extends JFrame {
         sidebar.add(btnEmpresas);
         sidebar.add(btnProdutos);
         sidebar.add(btnItens);
+        sidebar.add(btnCidades);
         sidebar.add(btnTransportes);
         sidebar.add(btnRelatorios);
 
@@ -131,6 +134,7 @@ public class AppShell extends JFrame {
         btnEmpresas.setEnabled(isAdmin || isOperador);
         btnProdutos.setEnabled(isAdmin);
         btnItens.setEnabled(isAdmin);
+        btnCidades.setEnabled(isAdmin || isOperador);
         btnTransportes.setEnabled(isAdmin || isOperador || isParceiro);
         btnRelatorios.setEnabled(true);
 
@@ -178,6 +182,12 @@ public class AppShell extends JFrame {
     private void abrirRelatorios() {
         RelatorioTransporteView view = new RelatorioTransporteView();
         new com.scmflusao.controller.RelatorioTransporteViewListener(view);
+        view.setVisible(true);
+    }
+
+    private void abrirCidades() {
+        CidadeView view = new CidadeView();
+        new CidadeViewListener(view);
         view.setVisible(true);
     }
 }
