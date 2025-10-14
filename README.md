@@ -1,4 +1,4 @@
-# SCM Flusão — Trabalho de AOO
+
 
 Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing com arquitetura MVC, persistência em banco H2 e organização por camadas. O objetivo é gerenciar agentes, empresas parceiras, produtos, itens e transportes com fluxos de criação, consulta, alteração, exclusão e relatórios.
 
