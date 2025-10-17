@@ -21,7 +21,7 @@ Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing 
 - Dashboard com contadores calculados dinamicamente a partir do estado dos transportes (Planejados, Em Trânsito, Entregues).
 - Atualização em tempo real do Dashboard via `DashboardEventBus` quando transportes são criados/alterados/excluídos.
 
-  ## Screenshots
+## Screenshots
 
 ### Tela de Login
 <div align="center">
