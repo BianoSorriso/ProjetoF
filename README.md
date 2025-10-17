@@ -2,6 +2,26 @@
 
 Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing com arquitetura MVC, persistência em banco H2 e organização por camadas. O objetivo é gerenciar agentes, empresas parceiras, produtos, itens e transportes com fluxos de criação, consulta, alteração, exclusão e relatórios.
 
+## Screenshots
+
+### Tela de Login
+<div align="center">
+  <img src="TELA LOGIN.jpg" alt="Tela de Login do Sistema" width="600">
+  <p><em>Interface de autenticação com campos para email e senha</em></p>
+</div>
+
+### Tela Principal (Dashboard)
+<div align="center">
+  <img src="TELA PRINCIPAL.jpg" alt="Tela Principal - Dashboard" width="800">
+  <p><em>Dashboard principal com menu lateral e indicadores de transportes</em></p>
+</div>
+
+### Gestão de Produtos
+<div align="center">
+  <img src="TELA GESTAO DE PRODUTOS.jpg" alt="Tela de Gestão de Produtos" width="800">
+  <p><em>Interface para cadastro e gerenciamento de produtos e itens</em></p>
+</div>
+
 ## Tecnologias Utilizadas
 - `Java` (JDK) e `Swing` para UI desktop
 - `H2` (`lib/h2-2.2.224.jar`) como banco de dados embutido
