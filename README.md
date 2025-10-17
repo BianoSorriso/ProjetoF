@@ -45,13 +45,34 @@ Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing 
 - Perfis de acesso (`ADMIN`, `OPERADOR`, `PARCEIRO`) controlam permissões nas telas.
 
 ## Como Executar
+
+### Opção 1: Via Linha de Comando
 1. Compilar fontes:
    - `javac -cp ".;NOVOFLU\lib\h2-2.2.224.jar" -d NOVOFLU\out (Get-ChildItem -Recurse NOVOFLU\main\java -Filter *.java | %% { $_.FullName })`
    - Em PowerShell (Windows), pode usar o script já demonstrado nas automações do projeto para coletar arquivos e compilar.
 2. Executar aplicação:
    - `java -cp "NOVOFLU\out;NOVOFLU\lib\h2-2.2.224.jar" com.scmflusao.view.Verificar`
-3. Login:
-   - Consulte `LOGIN E SENHA.txt` na raiz do projeto para credenciais de teste, se necessário.
+
+### Opção 2: Via Eclipse IDE
+1. **Importar o projeto:**
+   - Abra o Eclipse IDE
+   - Vá em `File` → `Import` → `General` → `Existing Projects into Workspace`
+   - Clique em `Browse` e selecione a pasta `NOVOFLU` (que contém os arquivos `.project` e `.classpath`)
+   - Marque o projeto "NOVOFLU" e clique em `Finish`
+
+2. **Configurar o classpath (se necessário):**
+   - Clique com o botão direito no projeto → `Properties`
+   - Vá em `Java Build Path` → `Libraries`
+   - Se a biblioteca H2 não estiver presente, clique em `Add External JARs...`
+   - Navegue até `NOVOFLU/lib/h2-2.2.224.jar` e adicione
+
+3. **Executar a aplicação:**
+   - Navegue até `src/main/java/com/scmflusao/view/Verificar.java`
+   - Clique com o botão direito → `Run As` → `Java Application`
+   - Ou use o atalho `Ctrl+F11` com o arquivo selecionado
+
+### Login
+- Consulte `LOGIN E SENHA.txt` na raiz do projeto para credenciais de teste, se necessário.
 
  
 

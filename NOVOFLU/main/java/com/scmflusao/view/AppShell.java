@@ -97,19 +97,21 @@ public class AppShell extends JFrame {
         sidebar.removeAll();
         JButton btnAgentes = new JButton("Agentes");
         JButton btnEmpresas = new JButton("Empresas Parceiras");
+        JButton btnArmazens = new JButton("Armazéns");
         JButton btnProdutos = new JButton("Produtos");
         JButton btnItens = new JButton("Itens");
         JButton btnCidades = new JButton("Cidades");
         JButton btnTransportes = new JButton("Transportes");
         JButton btnRelatorios = new JButton("Relatórios");
 
-        for (JButton b : new JButton[]{btnAgentes, btnEmpresas, btnProdutos, btnItens, btnCidades, btnTransportes, btnRelatorios}) {
+        for (JButton b : new JButton[]{btnAgentes, btnEmpresas, btnArmazens, btnProdutos, btnItens, btnCidades, btnTransportes, btnRelatorios}) {
             b.setBackground(BRANCO);
             b.setForeground(Color.DARK_GRAY);
         }
 
         btnAgentes.addActionListener(e -> abrirAgentes());
         btnEmpresas.addActionListener(e -> abrirEmpresas());
+        btnArmazens.addActionListener(e -> abrirArmazens());
         btnProdutos.addActionListener(e -> abrirProdutos());
         btnItens.addActionListener(e -> abrirItens());
         btnCidades.addActionListener(e -> abrirCidades());
@@ -124,6 +126,7 @@ public class AppShell extends JFrame {
 
         sidebar.add(btnAgentes);
         sidebar.add(btnEmpresas);
+        sidebar.add(btnArmazens);
         sidebar.add(btnProdutos);
         sidebar.add(btnItens);
         sidebar.add(btnCidades);
@@ -132,6 +135,7 @@ public class AppShell extends JFrame {
 
         btnAgentes.setEnabled(isAdmin || isOperador);
         btnEmpresas.setEnabled(isAdmin || isOperador);
+        btnArmazens.setEnabled(isAdmin || isOperador);
         btnProdutos.setEnabled(isAdmin);
         btnItens.setEnabled(isAdmin);
         btnCidades.setEnabled(isAdmin || isOperador);
@@ -188,6 +192,12 @@ public class AppShell extends JFrame {
     private void abrirCidades() {
         CidadeView view = new CidadeView();
         new CidadeViewListener(view);
+        view.setVisible(true);
+    }
+
+    private void abrirArmazens() {
+        ArmazemView view = new ArmazemView();
+        new ArmazemViewListener(view);
         view.setVisible(true);
     }
 }
