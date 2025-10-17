@@ -2,7 +2,26 @@
 
 Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing com arquitetura MVC, persistência em banco H2 e organização por camadas. O objetivo é gerenciar agentes, empresas parceiras, produtos, itens e transportes com fluxos de criação, consulta, alteração, exclusão e relatórios.
 
-## Screenshots
+## Integrantes do Grupo
+- Gustavo Coroa
+- Giulia Baum
+- Fabiano Bastos
+
+## Tecnologias Utilizadas
+- `Java` (JDK) e `Swing` para UI desktop
+- `H2` (`lib/h2-2.2.224.jar`) como banco de dados embutido
+- Padrões: `MVC`, `DAO` (camada de acesso a dados), `Controller` + `View` + `Model`
+- `Streams` da linguagem para agregações e filtros
+- `Event Bus` simples para atualização em tempo real do Dashboard
+
+## Como Foi Desenvolvido
+- Estrutura em pacotes por responsabilidade: `view` (telas), `controller` (regras de negócio e orquestração), `model` (entidades), `dao` (persistência), `auth` (sessão/usuário), `events` (eventos e listeners).
+- UI baseada em `Swing` com telas modulares: `AppShell` (janela principal com menu lateral) e janelas específicas para cada domínio (Agentes, Empresas, Produtos, Itens, Transportes, Relatórios).
+- Regras de domínio nos `controllers` e persistência via `DAOs` conectados ao H2.
+- Dashboard com contadores calculados dinamicamente a partir do estado dos transportes (Planejados, Em Trânsito, Entregues).
+- Atualização em tempo real do Dashboard via `DashboardEventBus` quando transportes são criados/alterados/excluídos.
+
+  ## Screenshots
 
 ### Tela de Login
 <div align="center">
@@ -22,19 +41,6 @@ Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing 
   <p><em>Interface para cadastro e gerenciamento de produtos e itens</em></p>
 </div>
 
-## Tecnologias Utilizadas
-- `Java` (JDK) e `Swing` para UI desktop
-- `H2` (`lib/h2-2.2.224.jar`) como banco de dados embutido
-- Padrões: `MVC`, `DAO` (camada de acesso a dados), `Controller` + `View` + `Model`
-- `Streams` da linguagem para agregações e filtros
-- `Event Bus` simples para atualização em tempo real do Dashboard
-
-## Como Foi Desenvolvido
-- Estrutura em pacotes por responsabilidade: `view` (telas), `controller` (regras de negócio e orquestração), `model` (entidades), `dao` (persistência), `auth` (sessão/usuário), `events` (eventos e listeners).
-- UI baseada em `Swing` com telas modulares: `AppShell` (janela principal com menu lateral) e janelas específicas para cada domínio (Agentes, Empresas, Produtos, Itens, Transportes, Relatórios).
-- Regras de domínio nos `controllers` e persistência via `DAOs` conectados ao H2.
-- Dashboard com contadores calculados dinamicamente a partir do estado dos transportes (Planejados, Em Trânsito, Entregues).
-- Atualização em tempo real do Dashboard via `DashboardEventBus` quando transportes são criados/alterados/excluídos.
 
 ## Classes e Objetos (Principais)
 - `com.scmflusao.view.AppShell`: janela principal com barra superior, menu lateral e área de conteúdo.
@@ -99,10 +105,7 @@ Sistema de Controle e Monitoramento logístico (SCM) desenvolvido em Java/Swing 
 ## Licença
 Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para detalhes.
 
-## Integrantes do Grupo
-- Gustavo Coroa
-- Giulia Baum
-- Fabiano Bastos
+
 
 ---
 Este README documenta o uso das principais camadas, entidades e fluxos da aplicação, os passos de execução e como publicar o trabalho no repositório solicitado.
